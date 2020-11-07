@@ -5,10 +5,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var exepressHbs=require('express-handlebars')
 var indexRouter = require('./routes/index');
+var mongoose= require('mongoose');
 
 
 var app = express();
-
+mongoose.connect('localhost:27017/shopping');
 // view engine setup
 app.engine('.hbs', exepressHbs({defaultLayout: 'layout', extname: '.hbs'}))
 app.set('view engine', 'hbs');

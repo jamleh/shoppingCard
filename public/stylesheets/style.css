@@ -3,6 +3,11 @@
 
 }
 .thumbnail .description {
-  columns: #717157;
+  columns: #4643da;
 
+}
+
+.price{
+  font-weight: bold;
+  font-size: 16px;
 }
