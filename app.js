@@ -9,7 +9,9 @@ var mongoose= require('mongoose');
 
 
 var app = express();
-mongoose.connect('localhost:27017/shopping');
+//mongoose.connect('localhost:27017/shopping');
+mongoose.connect('mongodb://localhost:27017/shopping', { useNewUrlParser: true }); // solving depricated functions 
+
 // view engine setup
 app.engine('.hbs', exepressHbs({defaultLayout: 'layout', extname: '.hbs'}))
 app.set('view engine', 'hbs');
